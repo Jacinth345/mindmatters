@@ -248,6 +248,17 @@ body {
   justify-content: center;
 }
 
+.text-col {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-content: center;
+  justify-content: center;
+}
+
 .two-col img {
   width: 100%;
   border-radius: var(--radius);
@@ -272,6 +283,11 @@ body {
 }
 
 .two-col.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-col.visible {
   opacity: 1;
   transform: translateY(0);
 }
