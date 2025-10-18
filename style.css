@@ -19,7 +19,7 @@
 }
 
 body {
-  padding-inline: 30px;
+  padding-inline: 20px;
   background: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.6;
@@ -164,8 +164,8 @@ body {
 /* Sections */
 .section {
   max-width: var(--max-width);
-  margin: 3rem auto;
-  padding: 1rem;
+  margin: 0rem auto;
+  padding: 0rem;
   border-bottom: 4px solid var(--text-bg-transparent);
 }
 
@@ -304,7 +304,12 @@ body {
     flex-direction: column;
     gap: 0.5rem;
   }
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
+
 
 /* --- Article Page Styles --- */
 .article {
