@@ -48,6 +48,44 @@
     </div>
   </section>
 
+
+  <section class="hero">
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=61581271754648" class="btn-dark">Check out our Facebook page</a>
+    </div>
+  </section>
+  
+  <!-- Section: What is Doom Scrolling -->
+  <section class="section">
+    <h3>What We wish to Achieve?</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Endless consumption of negative news</h4>
+        <p>
+          The tendency to keep scrolling through upsetting or alarming
+          information online without stopping.
+        </p>
+        <img src="images/home/negative_news.png" alt="Negative news" />
+      </div>
+      <div class="card">
+        <h4>Compulsive scrolling despite distress</h4>
+        <p>
+          Continuing to browse negative content even when it causes anxiety,
+          fear, or emotional exhaustion.
+        </p>
+        <img src="images/home/scrolling_distress.png" alt="Scrolling distress" />
+      </div>
+      <div class="card">
+        <h4>Anxiety-driven information seeking</h4>
+        <p>
+          The urge to check for updates or answers to ease uncertainty, which
+          often fuels more stress instead.
+        </p>
+        <img src="images/home/information_seeking.png" alt="Information seeking" />
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <p>Mind Matters</p>
@@ -55,3 +93,18 @@
   </footer>
 </body>
 </html>
+
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.card').forEach(card => observer.observe(card));
+document.querySelectorAll('.two-col').forEach(card => observer.observe(card));
+</script>

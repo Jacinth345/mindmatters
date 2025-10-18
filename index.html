@@ -67,25 +67,46 @@
   <section class="section two-col">
     <div class="text-col">
       <h3>Why is doom scrolling bad?</h3>
+      <div>
       <h4>Increases anxiety and stress</h4>
       <p>
         Constant exposure to negative news keeps your mind in a state of worry
         and tension.
       </p>
+      </div>
 
+      <div>
       <h4>Disrupts sleep and focus</h4>
       <p>
         Late-night scrolling and over-stimulation make it hard to rest or
         concentrate during the day.
       </p>
-
+      </div>
+      
+      <div>
       <h4>Leads to emotional exhaustion</h4>
       <p>
         Absorbing nonstop bad news drains your energy, leaving you feeling
         hopeless or overwhelmed.
       </p>
+      </div>
+      
     </div>
     <img src="images/home/side.png" alt="Fruits on table" class="side-img" />
   </section>
 </body>
 </html>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.card').forEach(card => observer.observe(card));
+document.querySelectorAll('.two-col').forEach(card => observer.observe(card));
+</script>
